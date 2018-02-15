@@ -21,6 +21,7 @@ public class Task2 extends Thread {
     
     private int maxValue, notifyEvery;
     boolean exit = false;
+    boolean toggle = true;
     
     private ArrayList<Notification> notifications = new ArrayList<>();
     
@@ -62,5 +63,11 @@ public class Task2 extends Thread {
                 notification.handle(message);
             });
         }
+    }
+    public boolean getToggle(){
+        return toggle;
+    }
+    public void setToggle(boolean x){
+        toggle = x;
     }
 }

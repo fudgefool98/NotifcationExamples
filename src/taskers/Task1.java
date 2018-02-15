@@ -20,6 +20,7 @@ public class Task1 extends Thread {
     
     private int maxValue, notifyEvery;
     boolean exit = false;
+    boolean toggle = true;
     
     private Notifiable notificationTarget;
     
@@ -70,6 +71,12 @@ public class Task1 extends Thread {
         else {
             return false;
         }
+    }
+    public boolean getToggle(){
+        return toggle;
+    }
+    public void setToggle(boolean x){
+        toggle = x;
     }
     
 }

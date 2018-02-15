@@ -21,6 +21,8 @@ public class Task3 extends Thread {
     
     private int maxValue, notifyEvery;
     boolean exit = false;
+    boolean toggle = true;
+
     
     private final PropertyChangeSupport pcs = new PropertyChangeSupport(this);
     
@@ -65,5 +67,11 @@ public class Task3 extends Thread {
             // I'm choosing not to send the old value (second param).  Sending "" instead.
             pcs.firePropertyChange("message", "", message);
         });
+    }
+    public boolean getToggle(){
+        return toggle;
+    }
+    public void setToggle(boolean x){
+        toggle = x;
     }
 }

@@ -61,8 +61,9 @@ public class NotificationsUIController implements Initializable, Notifiable {
             task1 = new Task1(2147483647, 1000000);
             task1.setNotificationTarget(this);
         }
-        if("Start Task 1".equals(taskOneButton.getText())){
+        if(task1.getToggle() == true){
         taskOneButton.setText("End");
+        task1.setToggle(false);
         task1.start();
         }
         else{
@@ -92,8 +93,9 @@ public class NotificationsUIController implements Initializable, Notifiable {
             });
             
         }       
-        if("Start Task 2".equals(taskTwoButton.getText())){
+        if(task2.getToggle() == true){
         taskTwoButton.setText("End");
+        task2.setToggle(false);
         task2.start();
         }
         else{
@@ -116,9 +118,10 @@ public class NotificationsUIController implements Initializable, Notifiable {
             });
             
         }
-        if("Start Task 3".equals(taskThreeButton.getText())){
-            taskThreeButton.setText("End");
-            task3.start();
+        if(task3.getToggle() == true){
+        taskThreeButton.setText("End");
+        task3.setToggle(false);
+        task3.start();
         }
         else{
             taskThreeButton.setText("Start Task 3");   
